@@ -1,0 +1,29 @@
+/* Body ki styling - poore page ko affect karti hai */
+body{
+  background: black;        /* Background color black - hacker jaise dark theme */
+  color: #00ff88;          /* Text color green - hacker terminal jaisa color */
+  font-family: Monospace;  /* Monospace font - terminal jaisa dikhta hai, sabhi letters same width ke */
+  padding: 20px;           /* Charo taraf se 20px ki spacing - edges se content door */
+}
+
+/* Terminal element ki styling - ID selector hai (#) */
+#terminal{
+  max-width: 600px;        /* Maximum width 600px - zyada bada nahi hoga */
+  white-space: pre-line;   /* Line breaks maintain karta hai, spacing preserve karta hai */
+}
+
+/* Cursor ki styling - ::after pseudo-element use kar rahe hain */
+.cursor::after{
+  content: "_";                    /* Underscore character cursor ki tarah dikhta hai */
+  animation: blink 1s infinite;    /* Blink animation - 1 second ki, hamesha chalti rahegi */
+}
+
+/* Blink animation define kar rahe hain - cursor on/off hoga */
+@keyframes blink{
+  0%,50%,100%{           /* 0%, 50% aur 100% pe - cursor visible hai */
+    opacity: 1;          /* Fully visible - opacity 1 */
+  }
+  25%,75%{               /* 25% aur 75% pe - cursor invisible hai */
+    opacity: 0;          /* Completely hidden - opacity 0 */
+  }
+}
